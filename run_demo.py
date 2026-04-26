@@ -9,7 +9,7 @@ from src.load.table_parser import ChunkSettings, export_artifacts
 def main() -> None:
     input_dir = Path("test_data")
     output_dir = Path("output")
-    settings = ChunkSettings(max_rows_per_chunk=200, max_cells_per_chunk=4000)
+    settings = ChunkSettings(max_rows_per_chunk=200, max_cells_per_chunk=4000, preview_rows_in_text_projection=20)
 
     if not input_dir.exists():
         raise FileNotFoundError(f"Input directory not found: {input_dir}")

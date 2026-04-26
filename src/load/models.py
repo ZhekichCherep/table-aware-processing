@@ -55,6 +55,7 @@ class TableProfile(BaseModel):
 class TableRegion(BaseModel):
     table_id: str
     sheet_name: str
+    orientation: str = "horizontal"
     header_rows: int = Field(ge=1)
     row_count: int = Field(ge=0)
     column_count: int = Field(ge=0)

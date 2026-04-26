@@ -11,6 +11,7 @@ from src.chunking.text_projection import build_text_projection
 class ChunkSettings:
     max_rows_per_chunk: int = 200
     max_cells_per_chunk: int = 4000
+    preview_rows_in_text_projection: int = 20
 
 
 def build_chunks(
@@ -70,6 +71,7 @@ def _chunk_table(
                     row_start,
                     row_end,
                     part,
+                    preview_rows=settings.preview_rows_in_text_projection,
                 ),
             )
         )

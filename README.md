@@ -47,6 +47,7 @@ Top-level object: `NormalizedDocument`
   - `table_regions[]`
     - `table_id`
     - `sheet_name`
+    - `orientation` (`horizontal` | `vertical` | `leftovers` | `cells`)
     - `header_rows`
     - `row_count`, `column_count`
     - `source_ref` (`sheet_name`, `range_a1`, `row_start`, `row_end`, `col_start`, `col_end`)
@@ -104,6 +105,7 @@ In `src/load/table_parser.py`:
 Chunking settings:
 - `max_rows_per_chunk`
 - `max_cells_per_chunk`
+- `preview_rows_in_text_projection` (how many rows to show in chunk preview)
 
 Chunking implementation is located in `src/chunking/table_chunker.py`:
 - `build_chunks(doc, settings)` -> `list[ChunkModel]`

@@ -1,6 +1,11 @@
-.venv/
-test_data/*
-output/*
 __pycache__/
 *.pyc
+*.pyo
+.venv/
 .pytest_cache/
+.ruff_cache/
+output/*
+!output/.gitkeep
+examples/*.xlsx
+examples/*.csv
+*.egg-info/
